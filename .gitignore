@@ -1,0 +1,34 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Runtime data
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.log
+emojis/assets/
+emojis/manifest.json
+emojis/*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+tmp/
+
+# Generated analysis and editor files
+graphify-out/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

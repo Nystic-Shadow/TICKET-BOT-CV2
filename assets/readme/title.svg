@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="230" viewBox="0 0 1200 230" role="img" aria-labelledby="title description">
+  <title id="title">Ticket Bot with CV2</title>
+  <desc id="description">Animated purple title card for the Discord ticket bot developed by Nystic Shadow.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090611"/>
+      <stop offset=".52" stop-color="#160d2d"/>
+      <stop offset="1" stop-color="#0b0714"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c4b5fd"/>
+      <stop offset=".42" stop-color="#8b5cf6"/>
+      <stop offset=".72" stop-color="#f5f3ff"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#8b5cf6" stroke-opacity=".07"/>
+    </pattern>
+    <filter id="glow" x="-40%" y="-80%" width="180%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" values="1 0 0 0 .545  0 1 0 0 .361  0 0 1 0 .965  0 0 0 .62 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <style>
+    .flow { stroke-dasharray: 12 18; animation: flow 8s linear infinite; }
+    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.8s ease-in-out infinite; }
+    .pulse.two { animation-delay: .7s; }
+    .pulse.three { animation-delay: 1.4s; }
+    .pulse.four { animation-delay: 2.1s; }
+    .shine { animation: shine 6s ease-in-out infinite alternate; }
+    @keyframes flow { to { stroke-dashoffset: -180; } }
+    @keyframes pulse { 0%, 100% { opacity: .45; transform: scale(.82); } 50% { opacity: 1; transform: scale(1.2); } }
+    @keyframes shine { from { opacity: .74; } to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) {
+      .flow, .pulse, .shine { animation: none; }
+    }
+  </style>
+  <rect x="1" y="1" width="1198" height="228" rx="24" fill="url(#background)" stroke="#8b5cf6" stroke-opacity=".28"/>
+  <rect x="1" y="1" width="1198" height="228" rx="24" fill="url(#grid)"/>
+  <ellipse cx="600" cy="108" rx="390" ry="92" fill="#7c3aed" opacity=".075" filter="url(#glow)"/>
+
+  <g transform="translate(84 69)" filter="url(#glow)">
+    <path d="M13 4h68a8 8 0 0 1 8 8v13a12 12 0 0 0 0 24v13a8 8 0 0 1-8 8H13a8 8 0 0 1-8-8V49a12 12 0 0 0 0-24V12a8 8 0 0 1 8-8Z" fill="#8b5cf6" fill-opacity=".13" stroke="url(#violet)" stroke-width="3"/>
+    <path d="M31 17v40" stroke="#c4b5fd" stroke-width="2" stroke-dasharray="4 6" opacity=".82"/>
+    <path d="M47 24h27M47 36h21M47 48h25" stroke="#f5f3ff" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <g font-family="Segoe UI, Inter, Arial, sans-serif">
+    <text x="600" y="99" text-anchor="middle" fill="url(#violet)" font-size="55" font-weight="750" letter-spacing="-1.4" class="shine">Ticket Bot with CV2</text>
+    <text x="600" y="137" text-anchor="middle" fill="#c4b5fd" font-size="17" font-weight="500" letter-spacing="2.5">DISCORD SUPPORT, ENGINEERED IN PURPLE</text>
+    <text x="600" y="187" text-anchor="middle" fill="#948aa8" font-size="14" letter-spacing=".7">Components V2 · persistent workflows · application emojis · Nystic Shadow</text>
+  </g>
+
+  <path d="M888 87C938 87 950 149 1001 149s64-62 115-62" fill="none" stroke="#8b5cf6" stroke-opacity=".55" stroke-width="2.5" stroke-linecap="round" class="flow"/>
+  <g fill="#c4b5fd" filter="url(#glow)">
+    <circle class="pulse" cx="888" cy="87" r="4"/>
+    <circle class="pulse two" cx="948" cy="121" r="4"/>
+    <circle class="pulse three" cx="1001" cy="149" r="4"/>
+    <circle class="pulse four" cx="1116" cy="87" r="4"/>
+  </g>
+</svg>

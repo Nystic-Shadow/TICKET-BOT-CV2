@@ -1,0 +1,18 @@
+name: ticket-bot-cv2
+
+services:
+  bot:
+    build:
+      context: .
+    env_file:
+      - .env
+    environment:
+      DATABASE_PATH: /app/data/bot.db
+      TRIGGERS_DATABASE_PATH: /app/data/triggers.db
+      LOG_PATH: /app/data/bot.log
+    restart: unless-stopped
+    volumes:
+      - ticket-bot-data:/app/data
+
+volumes:
+  ticket-bot-data:

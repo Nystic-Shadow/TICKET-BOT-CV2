@@ -1,0 +1,15 @@
+[project]
+name = "ticket-bot-with-cv2"
+version = "2.0.0"
+description = "Advanced multi-server Discord ticket bot built with Components V2"
+authors = [{ name = "Nystic Shadow" }]
+license = "MIT"
+requires-python = ">=3.11"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+exclude = ["graphify-out"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
